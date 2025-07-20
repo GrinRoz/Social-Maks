@@ -1,0 +1,38 @@
+.content{
+    background-color: #464f79;
+}
+
+.ava {
+    width: 30%;
+}
+
+.ava-mini{
+    width: 5%;
+}
+
+.profile {
+    display: flex;
+    color: white;
+    font-size: 25px;
+}
+
+.profile p {
+    margin-left: 10px;
+}
+
+.profile img{
+    border-radius: 15px 0 0 0 ;
+}
+
+.post{
+    margin-top: 20px;
+}
+
+.post-item{
+    margin-top: 20px;
+    color: white;
+}
+
+.post-item span{
+    margin-left: 10px;
+}

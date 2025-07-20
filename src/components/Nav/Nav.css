@@ -1,0 +1,10 @@
+.nav{
+    background-color: #464f79;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    line-height: 50px;
+    font-size: 30px;
+    padding: 15px;
+}
