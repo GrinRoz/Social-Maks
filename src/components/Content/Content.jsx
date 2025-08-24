@@ -1,23 +1,17 @@
 import react from 'react';
 import './Content.css'
+import Dialogs from '../Dialogs/Dialogs.jsx'
+import Posts from './Posts.jsx'
 import image from './image.png'
 
-function Content(){
+function Content(props){
     return(
         <div className="content">
             <div className="profile">
-                <img src={image} alt="" className='ava'/>
-                <p>Elon Maks</p>
+                <img src={props.image} alt="" className='ava'/>
+                <p>{props.name}</p>
             </div>
-            <div className="post">
-                <input type="text" placeholder='enter the post'/>
-                <button>Add post</button>
-                <div className="post-item">
-                    <img src={image} alt="" className='ava-mini'/>
-                    <span>Elon Maks</span>
-                    <p>Some text</p>
-                </div>
-            </div>
+            <Posts />
         </div>
    );
 }

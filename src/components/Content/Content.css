@@ -36,3 +36,63 @@
 .post-item span{
     margin-left: 10px;
 }
+
+.dialogs-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #464f79;
+    border-radius: 15px;
+    height: 70vh;
+    padding: 15px;
+}
+
+.dialogs-name, .dialogs-message, .dialogs-send{
+    width: 50%;
+    flex-grow: 1;
+}
+
+.dialogs-name, .dialogs-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.dialogs-name__item {
+    transition: 0.4s;
+    padding: 15px;
+    width: 50%;
+}
+
+.dialogs-name__item:hover {
+    background-color: #7e7ea2;
+}
+
+.dialogs-send {
+    text-align: center;
+}
+
+.dialogs-message__item p {
+    padding: 50px 5px;
+    background-color: #7e7ea2;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.dialogs-name__item h2{
+    background-color: white;
+    
+}
+
+.dialogs-send input, .dialogs-send button {
+    margin: 0 20px;
+    width: 30%;
+    height: 30px;
+    font-size: 20px;
+}
+
+.error-title, .error-subtitle {
+    color: white;
+}
