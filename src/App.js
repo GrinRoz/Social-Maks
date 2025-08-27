@@ -5,10 +5,15 @@ import Nav from './components/Nav/Nav.jsx';
 import Content from './components/Content/Content.jsx';
 import Error from './components/Error.jsx'
 import Dialogs from './components/Dialogs/Dialogs.jsx'
-// import Messages from './components/'
-// import logo1 from './components/Content/vasya-logo.png'
+import Messages from './components/Dialogs/Message.jsx'
+import Users from './components/Dialogs/User.jsx'
+import Name from './components/Dialogs/Name.jsx'
+import logo1 from './components/Content/vasya-logo.png'
 import image from './components/Content/image.png'
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
+
+let userName = ["Иван Иванов", "Илон Макс", "Билл Гейтс"]
+console.log(userName[0])
 
 function App() {
   return (
@@ -18,9 +23,12 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/profile' exact element={<Content name="Elon Maks" image={image}/>} />
-          {/* <Route path='/messages' exact element={<Messages/>} />
-          <Route path='/users' exact element={<Users/>} /> */}
-          <Route path='/dialogs' exact element={<Dialogs/>} />
+          <Route path='/messages' exact element={<Messages/>} />
+          <Route path='/users' exact element={<Users/>} />
+          <Route path='/dialogs' exact element={<Dialogs/>}/>
+            <Route path='/dialogs/1' exact element={<Name element={userName[0]}/>} />
+            <Route path='/dialogs/2' exact element={<Name element={userName[1]}/>} />
+            <Route path='/dialogs/3' exact element={<Name element={userName[2]}/>} />
           <Route path='*' exact element={<Error/>} />
         </Routes>
       </BrowserRouter>
