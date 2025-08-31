@@ -3,13 +3,13 @@ import './Content.css'
 import Dialogs from '../Dialogs/Dialogs.jsx'
 import Posts from './Posts.jsx'
 import image from './image.png'
+import ProfileInfo from './ProfileInfo.jsx';
 
 function Content(props){
     return(
         <div className="content">
             <div className="profile">
-                <img src={props.image} alt="" className='ava'/>
-                <p>{props.name}</p>
+                <ProfileInfo  />
             </div>
             <Posts />
         </div>
