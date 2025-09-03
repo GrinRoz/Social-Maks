@@ -15,17 +15,18 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 let userName = ["Иван Иванов", "Илон Макс", "Билл Гейтс"]
 console.log(userName[0])
 
-function App() {
+function App(props) {
   return (
     <div className = "grid-content">
       <BrowserRouter>
         <Header />
         <Nav />
         <Routes>
-          <Route path='/profile' exact element={<Content name="Elon Maks" image={image}/>} />
+          {/* <Route path='/' exact element={<Content />} /> */}
+          <Route path='/profile' exact element={<Content sentence = {props.sentence}/>} />
           <Route path='/messages' exact element={<Messages/>} />
           <Route path='/users' exact element={<Users/>} />
-          <Route path='/dialogs' exact element={<Dialogs/>}/>
+          <Route path='/dialogs' exact element={<Dialogs dialogsNames = {props.dialogsNames} dialogsMessage = {props.dialogsMessage}/>}/>
             <Route path='/dialogs/1' exact element={<Name element={userName[0]}/>} />
             <Route path='/dialogs/2' exact element={<Name element={userName[1]}/>} />
             <Route path='/dialogs/3' exact element={<Name element={userName[2]}/>} />

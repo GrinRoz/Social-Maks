@@ -11,7 +11,7 @@ function Content(props){
             <div className="profile">
                 <ProfileInfo  />
             </div>
-            <Posts />
+            <Posts sentence = {props.sentence}/>
         </div>
    );
 }
